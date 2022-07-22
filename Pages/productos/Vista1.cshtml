@@ -1,0 +1,41 @@
+﻿@page
+@model AppWebMvcRazor.Pages.Forecast.Vista1ForecastModel
+@{
+    ViewBag.Title = "Vista1";
+}
+
+
+<div class="container border" style="padding:20px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="producto.ID_PRODUCT"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="producto.ID_PRODUCT" class="form-control">
+            </div>
+            <span class="text-danger" asp-validation-for="producto.ID_PRODUCT"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="producto.NAME_PRODUCT"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="producto.NAME_PRODUCT" class="form-control">
+            </div>
+            <span class="text-danger" asp-validation-for="producto.NAME_PRODUCT"></span>
+        </div>
+        @Model.message
+        <div class="form-group row">
+            <div class="col-3">
+                <input type="submit" class="btn btn-primary" value="Guardar Producto" asp-page-handler="RedirectListarProductos">
+            </div>
+            <div class="col-5">
+
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{17523286-EAE4-4655-B9BB-CF309B3393E4}|WebAppWeather">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="bin/Debug/netcoreapp3.1/WebAppWeather.runtimeconfig.json">
+    <Files>
+      <File FileName="bin/Debug/netcoreapp3.1/WebAppWeather.runtimeconfig.json" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AppFrontendProductos" expanded="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.AppFrontendProductos PreferredExecutionTarget="/Applications/Google Chrome 2.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

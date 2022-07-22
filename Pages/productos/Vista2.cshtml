@@ -1,0 +1,65 @@
+﻿@page
+@model AppWebMvcRazor.Pages.Forecast.Vista2ForecastModel
+@{
+    ViewBag.Title = "Vista2";
+}
+
+
+<div class="container border" style="padding:20px">
+    <form method="post">
+
+        <h3>Listado de productos a Categorizar(Peliculas o Series)</h3>
+      
+        <div class="text-danger">@Model.message</div>
+
+        <div style="height:600px;overflow-y:scroll">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID del Producto</th>                        
+                        <th>Nombre del Producto</th>
+                        <th>Categoria del Producto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var producto in @Model.productos)
+                    {
+                    <tr>
+                        <td>@producto.ID_PRODUCT </td>
+                        <td>@producto.NAME_PRODUCT </td>                        
+                        <td>
+                            <select name="cars" id="cars">
+                                <option value="-1">Selecione...</option>
+                                @foreach (var categoria in @Model.categorias)
+                                {
+                                    if (@categoria.ID_CATEGORY == @producto.FK_ID_CATEGORY)
+                                    {
+                                        <option value="@categoria.ID_CATEGORY" selected>@categoria.NAME_CATEGORY</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@categoria.ID_CATEGORY">@categoria.NAME_CATEGORY</option>
+                                    }
+                                }
+                            </select>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <input type="submit" class="btn btn-primary" value="Regresar" asp-page-handler="RedirectVista1">
+            </div>
+            <div class="col-3">
+                <input type="submit" class="btn btn-info" value="Recargar" asp-page-handler="LoadData">
+            </div>
+            <div class="col-3">
+                <input type="submit" class="btn btn-outline-danger" value="Filtrar Peliculas" asp-page-handler="LoadPeliculas">
+            </div>
+        </div>
+    </form>
+</div>
+ 
